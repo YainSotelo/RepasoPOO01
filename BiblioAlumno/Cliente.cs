@@ -15,13 +15,28 @@ namespace BiblioAlumno
 
         public int Cbu { get; set; } = 0;
 
-
+        public double Saldo { get; set; }
 
         public Cliente()
         {
-            new Cuenta()
+            Cuenta cuenta = new Cuenta();
+        }
+        
+
+        public void Acreditar(double monto)
+        {
+            Efectivo = Efectivo + monto;
+            Cuenta.Acreditar(monto * 0.2);
         }
 
-        
+        public void Debitar(double monto)
+        {
+            Efectivo = Efectivo - monto;
+            Cuenta.Debitar(monto / 0.2);
+        }
+
+        public bool TieneAlemenos(double monto) => Saldo >= monto;
+
+
     }
 }
