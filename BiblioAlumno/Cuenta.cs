@@ -14,8 +14,6 @@ namespace BiblioAlumno
 
         public Cuenta()
 
-
-
         {
              Contador ++;
 

@@ -1,13 +1,8 @@
-﻿using BiblioAlumno;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BiblioAlumno
+﻿namespace BiblioAlumno
 {
-    class Cliente
+    public class Cliente
     {
-        public Cuenta Cuenta { get; set; }
+        public Cuenta cuenta { get; set; }
         
         public string nombre { get; set; }
         public string apellido { get; set; }
@@ -26,13 +21,13 @@ namespace BiblioAlumno
         public void Acreditar(double monto)
         {
             Efectivo = Efectivo + monto;
-            Cuenta.Acreditar(monto * 0.2);
+            cuenta.Acreditar(monto * 0.2);
         }
 
         public void Debitar(double monto)
         {
             Efectivo = Efectivo - monto;
-            Cuenta.Debitar(monto / 0.2);
+            cuenta.Debitar(monto / 0.2);
         }
 
         public bool TieneAlemenos(double monto) => Saldo >= monto;
