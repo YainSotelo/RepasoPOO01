@@ -1,11 +1,21 @@
-﻿namespace BiblioAlumno
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Linq;
+using Banco.Estrategia;
+
+namespace Banco
 {
-    public class Cliente
+    public class Cliente 
     {
+        public IEstrategia Estrategia;
+
         public Cuenta cuenta { get; set; }
         
         public string nombre { get; set; }
+
         public string apellido { get; set; }
+
         public double Efectivo { get; set; } = 0;
 
         public int Cbu { get; set; } = 0;

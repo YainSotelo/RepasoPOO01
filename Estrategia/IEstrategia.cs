@@ -1,5 +1,6 @@
+using Cuenta;
 
-namespace BiblioAlumno
+namespace Banco.Estrategia
 {
     public interface IEstrategia
     {
