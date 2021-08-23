@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System text;
+using Banco;
 
-namespace BiblioAlumno.Estrategia
+namespace Banco.Estrategia
 {
    public class cauto : IEstrategia
    {

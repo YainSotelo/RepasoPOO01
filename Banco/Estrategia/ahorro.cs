@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using BiblioAlumno;
+using Banco;
 
-namespace BiblioAlumno.Estrategia
+namespace Banco.Estrategia
 {
     public class Ahorro : IEstrategia
     {

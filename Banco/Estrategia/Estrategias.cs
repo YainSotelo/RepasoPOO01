@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-using System.BiblioAlumno;
+﻿using Banco;
 
-namespace BiblioAlumno.Estrategias
+namespace Banco.Estrategias
 {
     public static class Estrategias
     {
@@ -18,9 +14,9 @@ namespace BiblioAlumno.Estrategias
         };
 
         public static IEstrategia EstrategiaPara(Cliente cliente)
-        {
-            return (Estra.FirstOrDefault(e => e.EsApto(cliente)));
-        }
+        
+         => (Estra.FirstOrDefault(e => e.EsApto(cliente)));
+        
     }
 }
 
