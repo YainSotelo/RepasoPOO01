@@ -26,6 +26,12 @@ namespace Banco
 
         public double Debitar(double monto) => Saldo = Saldo - monto;
 
+        internal double VaciarCuenta()
+        {
+            var Saldo = this.Saldo;
+            Saldo= 0;
+            return Saldo;
+        }
         public bool TieneAlemenos(double monto) => Saldo >= monto;
     }
             

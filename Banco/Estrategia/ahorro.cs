@@ -8,7 +8,7 @@ namespace Banco.Estrategia
         {
             cliente.AcreditarEfectivo(monto * 0.5);
 
-            cliente.Cuenta.Acreditar(monto * 0.5);
+            cliente.cuenta.Acreditar(monto * 0.5);
         }
         public void Debitar(Cliente cliente,double monto)
         {
@@ -18,7 +18,7 @@ namespace Banco.Estrategia
             }
             else
             {
-                monto -= cliente.VaciarCuenta();
+                monto -= cliente.VaciarEfectivo();
 
                 cliente.cuenta.Debitar(monto);
             }

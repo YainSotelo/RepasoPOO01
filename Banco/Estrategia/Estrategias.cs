@@ -1,10 +1,13 @@
-﻿using Banco;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Banco;
+using Banco.Estrategia;
 
 namespace Banco.Estrategias
 {
     public static class Estrategias
     {
-        static List< IEstrategia> Estra = new List<IEstrategia>()
+        static List<IEstrategia> Estra = new List<IEstrategia>()
         {
             new Ahorro(),
 
@@ -15,11 +18,11 @@ namespace Banco.Estrategias
 
         public static IEstrategia EstrategiaPara(Cliente cliente)
         
-         => (Estra.FirstOrDefault(e => e.EsApto(cliente)));
+        => (Estra.FirstOrDefault(e => e.EsApto(cliente)));
         
     }
 }
 
-   
+
 
 

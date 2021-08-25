@@ -10,13 +10,26 @@ namespace Banco
     {
         public IEstrategia Estrategia;
 
+        internal void AcreditarEfectivo(double monto)
+            => Efectivo = Efectivo + monto;   
+
         public Cuenta cuenta { get; set; }
         
         public string nombre { get; set; }
 
+        internal void DebitarEfectivo(double monto)
+            => Efectivo = Efectivo - monto;
+
         public string apellido { get; set; }
 
         public double Efectivo { get; set; } = 0;
+
+        internal double VaciarEfectivo()
+        {
+            var Efectivo = this.Efectivo;
+            Efectivo=0;
+            return Efectivo;
+        }
 
         public int Cbu { get; set; } = 0;
 
@@ -26,7 +39,6 @@ namespace Banco
         {
             Cuenta cuenta = new Cuenta();
         }
-        
 
         public void Acreditar(double monto)
         {
